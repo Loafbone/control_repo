@@ -5,7 +5,7 @@ class minecraft (
   file {$install_dir:
     ensure => directory,
   }
-  file {'"${install_dir}/minecraft_server.1.12.2.jar":
+  file {"${install_dir}/minecraft_server.jar":
     ensure      => file,
     source      => $url,
     before      => Service['minecraft'],
